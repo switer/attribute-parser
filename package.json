@@ -1,0 +1,30 @@
+{
+  "name": "attribute-parser",
+  "version": "1.0.0",
+  "description": "RegExp implement html attribute parser.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/switer/attribute-parser.git"
+  },
+  "keywords": [
+    "attribute",
+    "parser",
+    "regexp"
+  ],
+  "author": "switer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/switer/attribute-parser/issues"
+  },
+  "homepage": "https://github.com/switer/attribute-parser#readme",
+  "devDependencies": {
+    "mocha": "^2.3.3"
+  }
+}
