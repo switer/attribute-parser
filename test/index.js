@@ -2,7 +2,7 @@
 
 var assert = require('assert')
 var AttParser = require('../index')
-var attrs = AttParser('space="abc \n 123" name= sex company="TX" test=" 123" disabled=true value=1')
+var attrs = AttParser('space="abc \n 123" name= sex company="TX" test=" 123" disabled=true value=1 $id="dolar"')
 
 describe('#Parse', function () {
     it('Value include space', function () {
@@ -23,5 +23,12 @@ describe('#Parse', function () {
     })
     it('Number value', function () {
         assert.equal(attrs.value, '1')
+    })
+    it('Attribute name with $', function () {
+        assert.equal(attrs.value, '1')
+    })
+    it('Redundant attribute', function () {
+        var attrs = AttParser('name="a" name="a"')
+        assert.equal(attrs.name, 'a')
     })
 })
