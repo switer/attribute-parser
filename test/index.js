@@ -31,4 +31,9 @@ describe('#Parse', function () {
         var attrs = AttParser('name="a" name="a"')
         assert.equal(attrs.name, 'a')
     })
+    it('Attribute value with space', function () {
+        var attrs = AttParser('data-num="1" data-index="{name: \'abc\'}"')
+        assert.equal(attrs['data-num'], '1')
+        assert.equal(attrs['data-index'], "{name: 'abc'}")
+    })
 })
